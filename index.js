@@ -1,8 +1,7 @@
 const Discord = require("discord.js")
 const cron = require("cron")
 const client = new Discord.Client()
-const token = "ODA0NjE5NzExMTIyNzY3ODcz.YBO-gA.hVd53_TCfNwRtanNTKu3IYD10qg"
-
+const token = process.env.TOKEN
 let user
 
 const queue = []
