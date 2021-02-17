@@ -8,7 +8,9 @@ const queue = []
 
 const job = new cron.CronJob("0 17 * * *", 
 function () {
-  sendQueue(queue)
+  if (queue.length) {
+    sendQueue(queue)
+  }
 });
 job.start()
 
